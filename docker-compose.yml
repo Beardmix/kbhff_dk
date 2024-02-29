@@ -1,0 +1,10 @@
+version: '3'
+services:
+
+  apache:
+    image: kbhff_site
+    container_name: kbhff_dev
+    volumes:
+      - ./theme/www/:/srv/sites/kbhff/kbhff_dk/theme/www
+    ports:
+      - "8080:80"
