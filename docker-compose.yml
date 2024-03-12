@@ -8,3 +8,18 @@ services:
       - ./theme/www/:/srv/sites/kbhff/kbhff_dk/theme/www
     ports:
       - "8080:80"
+  database:
+    image: mariadb
+    container_name: "mariadb"
+    restart: "always"
+    ports:
+      - "3306:3306"
+    # volumes:
+    #   - ${MYSQL_INITDB_DIR-./docker/config/initdb}:/docker-entrypoint-initdb.d
+    #   - ${MYSQL_DATA_DIR-./docker/data/mysql}:/var/lib/mysql
+    #   - ${MYSQL_LOG_DIR-./docker/logs/mysql}:/var/log/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
