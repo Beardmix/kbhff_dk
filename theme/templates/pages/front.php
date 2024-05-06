@@ -26,6 +26,16 @@ $post_items = $IC->getItems([
 	<div class="banner i:banner variant:random format:jpg"></div>
 
 	<div class="c-wrapper">
+		
+		<div class="c-box actions">
+			<? if(session()->value("user_id") != 1): ?>
+				<a href="https://wiki.kbhff.dk/tiki-index.php?page=Vagtplaner" class="shift">Ta' en vagt</a>
+				<a href="/butik" class="order">Bestil en pose</a>
+			<? else: ?>
+				<a href="/bliv-medlem" class="member">Bliv medlem</a>
+				<a href="/login" class="login">Login</a>
+			<? endif; ?>
+		</div>
 
 		<div class="c-two-thirds">
 
@@ -110,16 +120,6 @@ $post_items = $IC->getItems([
 
 		<div class="c-one-third">
 
-			<div class="c-box actions">
-				<h3>Genveje</h3>
-				<ul class="actions">
-					<? if(session()->value("user_id") != 1): ?>
-					<li><a href="https://wiki.kbhff.dk/tiki-index.php?page=Vagtplaner" class="shift">Ta' en vagt</a></li>
-					<? endif; ?>
-					<li><a href="/butik" class="order">Bestil en pose</a></li>
-					<li><a href="/bliv-medlem" class="member">Bliv medlem</a></li>
-				</ul>
-			</div>
 
 
 			<div class="c-box weeklybag">
@@ -136,22 +136,24 @@ $post_items = $IC->getItems([
 			<? endif; ?>
 			</div>
 
-			<div class="c-box newsletter i:newsletter">
-				<h3>Tilmeld Nyhedsbrev</h3>
-		
-				<form action="//kbhff.us15.list-manage.com/subscribe/post?u=d2a926649ebcf316af87a05bb&amp;id=141ae6f59f" method="post" target="_blank">
-					<input type="hidden" name="b_d2a926649ebcf316af87a05bb_141ae6f59f" value="">
-					<div class="field email required">
-						<label for="input_email">E-mail</label>
-						<input type="email" value="" name="EMAIL" id="input_email" />
-					</div>
+			
+		</div>
 
-					<ul class="actions">
-						<li class="submit"><input type="submit" value="Tilmeld" name="subscribe" class="button" /></li>
-					</ul>
-				</form>
+		<div class="c-box newsletter i:newsletter">
+			<h3>Tilmeld Nyhedsbrev</h3>
+	
+			<form action="//kbhff.us15.list-manage.com/subscribe/post?u=d2a926649ebcf316af87a05bb&amp;id=141ae6f59f" method="post" target="_blank">
+				<input type="hidden" name="b_d2a926649ebcf316af87a05bb_141ae6f59f" value="">
+				<div class="field email required">
+					<label for="input_email">E-mail</label>
+					<input type="email" value="" name="EMAIL" id="input_email" />
+				</div>
 
-			</div>
+				<ul class="actions">
+					<li class="submit"><input type="submit" value="Tilmeld" name="subscribe" class="button" /></li>
+				</ul>
+			</form>
+
 		</div>
 
 	</div>
