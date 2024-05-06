@@ -8,6 +8,26 @@ the current live site, we will post information about how to set up this project
 
 Stay tuned.
 
+# How to run:
+## Setup
+Install docker: 
+
+https://www.docker.com/get-started
+
+Once installed, run this command in the root directory:
+
+```docker build -t kbhff_site .```
+
+## Run the app in dev
+
+Execute the following command:
+
+```docker-compose up```
+
+Acccess the app:
+
+http://localhost:8080
+
 
 # About KBHFF
 Københavns Fødevarefællesskab / Copenhagen Foodcoop (KBHFF) is a volunteer based organisation, that buys and distributes

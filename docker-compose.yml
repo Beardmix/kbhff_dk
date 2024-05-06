@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  apache:
+    image: kbhff_site
+    container_name: kbhff_dev
+    volumes:
+      - ./:/srv/sites/kbhff/kbhff_dk/
+    ports:
+      - "8080:80"
+  database:
+    image: mariadb
+    container_name: "mariadb"
+    restart: "always"
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
