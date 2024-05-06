@@ -1079,9 +1079,9 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
-	width: calc(49.99% - 24px);
+	width: calc(33% - 24px);
 	height: 300px;
-	margin: 12px;
+	margin: 12px; 
 	padding: 0;
 	box-sizing: border-box;
 	overflow: hidden;
@@ -1116,6 +1116,33 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 }
 #content .front .c-box.weeklybag p.readmore {padding-bottom: 12px; text-align: right;}
 
+
+#content .front div.steps ul.items {font-size: 0; padding: 0; margin: 0; list-style: none;}
+#content .front div.steps ul.items li.item {
+	display: inline-block;
+	position: relative;
+	width: calc(24% - 24px);
+	margin: 12px;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: center;
+}
+#content .front div.steps ul.items li.item h3 {margin-top: 0px;}
+#content .front div.steps ul.items li.item h3,
+#content .front div.steps ul.items li.item p {padding-left: 0; padding-right: 0;}
+#content .front div.steps ul.items li.item h3 > a {color: #000000;}
+#content .front div.steps ul.items li.item:hover {cursor: pointer; }
+#content .front div.steps ul.items li.item:hover h3 > a {color: #3e8e17;}
+#content .front div.steps ul.items li.item .image {
+	width: 100%;
+	text-align: center;
+}
+#content .front div.news ul.items li.item .image img {
+	width: 100%;
+	padding: 0;
+}
 
 /*s-post.css*/
 #content .post {}
