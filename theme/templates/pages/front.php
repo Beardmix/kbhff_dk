@@ -89,7 +89,23 @@ $post_items = $IC->getItems([
 				</li>
 			</ul>
 		</div>
-
+		<div class="hero">
+			<ul class="items">
+				<li class="item">
+					<div class="image">
+						<img src="https://kbhff.dk/images/273/single_media/380x.png"/>
+					</div>
+				</li>
+				<li class="item">
+					<h3 itemprop="headline">What's in the bag</h3>
+					<div class="description" itemprop="description">
+						Ugens pose rummer typisk 6-8 forskellige slags lokalt produceret og sæsonbestemt økologisk frugt og grønt.<br /> 
+						Da posen sammensættes af sæsonens grøntsager varierer vægten. <br />
+						Om vinteren, hvor der er mange rodfrugter, vejer den typisk 6-8 kilo, mens den om sommeren, hvor salater, asparges, krydderurter osv. fylder mere, vejer den typisk omkring 4 kilo. 
+					</div>
+				</li>
+			</ul>
+		</div>
 		
 		<? if($post_items): ?>
 			<div class="news">

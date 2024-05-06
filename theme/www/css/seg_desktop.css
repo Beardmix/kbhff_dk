@@ -1074,6 +1074,9 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 #content .signup fieldset p.terms_summary {font-weight: 700;}
 
 /*s-front.css*/
+#content .front div.news  {
+	margin: 64px 0;
+}
 #content .front div.news ul.items {font-size: 0; padding: 0; margin: 0; list-style: none;}
 #content .front div.news ul.items li.item {
 	display: inline-block;
@@ -1140,6 +1143,33 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 	text-align: center;
 }
 #content .front div.news ul.items li.item .image img {
+	width: 100%;
+	padding: 0;
+}
+
+
+#content .front div.hero ul.items {font-size: 0; padding: 0; margin: 0; list-style: none;}
+#content .front div.hero ul.items li.item {
+	display: inline-block;
+	position: relative;
+	width: calc(49% - 24px);
+	margin: 12px;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#content .front div.hero ul.items li.item h3 {margin-top: 0px;}
+#content .front div.hero ul.items li.item h3,
+#content .front div.hero ul.items li.item p {padding-left: 0; padding-right: 0;}
+#content .front div.hero ul.items li.item h3 > a {color: #000000;}
+#content .front div.hero ul.items li.item:hover {cursor: pointer; }
+#content .front div.hero ul.items li.item:hover h3 > a {color: #3e8e17;}
+#content .front div.hero ul.items li.item .image {
+	width: 100%;
+	text-align: center;
+}
+#content .front div.hero ul.items li.item .image img {
 	width: 100%;
 	padding: 0;
 }
@@ -2132,5 +2162,3 @@ div.overlay .field.password {
 #content .front  .c-box.actions :hover {
 	background: #357914;
 }
-
-
