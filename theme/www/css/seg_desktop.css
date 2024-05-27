@@ -17,7 +17,7 @@ body {
 }
 #page {}
 body span.highlight,
-#page span.highlight {color: #3e8e17;}
+#page span.highlight {color: #6EAA51;}
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd, dt {padding: 0; margin: 0;}
 h1, h2, h3, h4, h5, h6, p, li, dd, dt, span, a {line-height: 1em; font-weight: 400;}
 ul {list-style: none;}
@@ -129,7 +129,7 @@ div.field.files ul.filelist li.new {font-weight: bold;}
 div.field.files ul.filelist li.label {display: inline-block; padding: 1px 10px 3px; margin: 0 20px 5px; border-radius: 6px; background: #dedede;}
 div.field.focus input,
 div.field.focus select,
-div.field.focus textarea {margin: 0; width: 100%; border: 3px solid #3E8E17;}
+div.field.focus textarea {margin: 0; width: 100%; border: 3px solid #6EAA51;}
 div.field.focus textarea:not(.autoexpand) {height: 104px;}
 div.field.checkbox.focus label {
 	background-image: url(../assets/kbhff-skin/img/gx_checkbox_unchecked_focus.svg);
@@ -157,7 +157,7 @@ div.field input[type="number"]::-webkit-inner-spin-button,
 div.field input[type="number"]::-webkit-outer-spin-button {margin: 0;
 	-webkit-appearance: none;
 }
-div.field.files.focus ul.filelist {border-color: #3E8E17; border-width: 3px; width: calc(100% - 8px); margin: 0 !important;}
+div.field.files.focus ul.filelist {border-color: #6EAA51; border-width: 3px; width: calc(100% - 8px); margin: 0 !important;}
 div.field.error input,
 div.field.error select,
 div.field.error textarea {margin: 0; width: 100%; border: 3px solid #C22414;}
@@ -211,7 +211,7 @@ ul.actions li,
 }
 ul.actions input.button,
 ul.actions a.button,
-#content ul.actions a.button {font-size: 14px; display: block; padding: 7px 14px; line-height: 22px; background-color: #999999; color: #ffffff; border: none; cursor: pointer;
+#content ul.actions a.button {font-size: 14px; display: block; padding: 7px 14px; line-height: 22px; background-color: #6EAA51; color: #ffffff; border: none; cursor: pointer;
 	font-weight: 400;
 	text-transform: uppercase;
 	font-family: 'voresfont', Arial, Helvetica, sans-serif;
@@ -221,10 +221,10 @@ ul.actions a.button,
 #content ul.actions a.button {text-decoration: none;}
 ul.actions input.button:hover,
 ul.actions a.button:hover,
-#content ul.actions a.button:hover {background-color: #666666;}
+#content ul.actions a.button:hover {background-color: #357914;}
 ul.actions input.button.primary,
 ul.actions a.button.primary,
-#content ul.actions a.button.primary {background-color: #3e8e17; color: #ffffff;}
+#content ul.actions a.button.primary {background-color: #6EAA51; color: #ffffff;}
 ul.actions input.button.primary:hover,
 ul.actions a.button.primary:hover,
 #content ul.actions a.button.primary:hover {background-color: #357914;}
@@ -270,10 +270,10 @@ div.field.html .viewer {display: none;}
 div.field.html .editor {  position: relative; z-index: 3;}
 div.field.html ul.new_tag_options {display: block; vertical-align: top; position: relative; z-index: 1; padding: 0 0 10px !important; margin: 0 !important;}
 div.field.html ul.new_tag_options li {font-size: 1rem; line-height: 1em !important; color: #000000; cursor: pointer; margin: 3px 3px 0; border-radius: 13px; background-color: #dedede; padding: 6px 10px 7px !important;  display: block;}
-div.field.html ul.new_tag_options li:hover {background-color: #3E8E17; color: #ffffff;}
+div.field.html ul.new_tag_options li:hover {background-color: #6EAA51; color: #ffffff;}
 div.field.html .editor div.tag {margin: 2px 2px 3px; padding: 0 0 0 30px; background-color: #dcdcdc; position: relative; border: 1px solid #999999;}
-div.field.html .editor div.dragged {background-color: #3E8E17; border-color: #3E8E17;}
-div.field.html .editor div.tag.dragged .drag {background-color: #3E8E17;}
+div.field.html .editor div.dragged {background-color: #6EAA51; border-color: #6EAA51;}
+div.field.html .editor div.tag.dragged .drag {background-color: #6EAA51;}
 div.field.html .editor div.tag.dragged ul.type li {color: #ffffff;}
 div.field.html .editor div.tag .drag {display: none; position: absolute; top: 0px; left: -20px; border-top-left-radius: 100%; border-bottom-left-radius: 100%; background: #dedede; width: 27px; height: 27px; cursor: move;
 	background: #dedede url(../assets/kbhff-skin/img/bg_icons.png) no-repeat 6px -93px;
@@ -286,7 +286,7 @@ div.field.html .editor div.tag:hover ul.tag_options {display: block;}
 div.field.html .editor div.tag ul.tag_options li.add {position: absolute; top: 13px; right: 8px; border-radius: 15px; background: #dedede; width: 30px; height: 30px; cursor: pointer;
 	font-size: 16px; line-height: 1em; padding: 3px 4px !important; text-align: center;
 }
-div.field.html .editor div.tag ul.tag_options li.add:hover {background-color: #3E8E17; color: #ffffff;}
+div.field.html .editor div.tag ul.tag_options li.add:hover {background-color: #6EAA51; color: #ffffff;}
 div.field.html .editor div.tag:first-child ul.tag_options li.remove {display: none;}
 div.field.html .editor div.tag ul.tag_options li.remove {position: absolute; top: 0px; right: -15px; border-radius: 15px; background: #dedede; width: 30px; height: 30px; cursor: pointer;
 	background: #dedede url(../assets/kbhff-skin/img/bg_icons.png) no-repeat 8px -42px;
@@ -295,7 +295,7 @@ div.field.html .editor div.tag ul.tag_options li.remove:hover {background-color:
 div.field.html .editor div.tag ul.tag_options li.classname {position: absolute; top: -15px; right: 8px; border-radius: 15px; background: #dedede; width: 30px; height: 30px; cursor: pointer;}
 div.field.html .editor div.tag ul.tag_options li.classname.open {width: auto; white-space: nowrap; font-size: 0;}
 div.field.html .editor div.tag ul.tag_options li.classname span {display: inline-block; vertical-align: top; font-size: 10px; padding-top: 3px; padding-left: 5px;}
-div.field.html .editor div.tag ul.tag_options li.classname:hover {background-color: #3E8E17; color: #ffffff;}
+div.field.html .editor div.tag ul.tag_options li.classname:hover {background-color: #6EAA51; color: #ffffff;}
 div.field.html .editor div.tag ul.tag_options li.classname form {margin: 0; display: inline-block; vertical-align: top;}
 div.field.html .editor div.tag ul.tag_options li.classname form .field {padding: 3px 12px 0 3px;}
 div.field.html .editor div.tag ul.tag_options li.classname form .field label {display: none;}
@@ -309,7 +309,7 @@ div.field.html .editor div.tag ul.type li.selected {display: block;}
 div.field.html .editor div.tag ul.type.open {z-index: 10; border: 1px solid #999999; margin: -1px !important; background-color: #F5F7F8;}
 div.field.html .editor div.tag ul.type.open li {display: block; color: #5c5c5c !important;}
 div.field.html .editor div.tag ul.type.open li:hover {background-color: #dedede;}
-div.field.html .editor div.tag ul.type.open li.selected {background-color: #3E8E17 !important; color: #ffffff !important;}
+div.field.html .editor div.tag ul.type.open li.selected {background-color: #6EAA51 !important; color: #ffffff !important;}
 div.field.html .editor div.tag ul.type li.code {font-size: 8px; padding: 11px 0 !important;}
 div.field.html .editor div.tag ul.type li.media {font-size: 8px; padding: 11px 0 !important;}
 div.field.html .editor div.tag ul.type li.youtube {font-size: 8px; padding: 5px 4px !important; word-wrap: break-word;}
@@ -322,10 +322,10 @@ div.field.html .editor div.tag div.text a,
 div.field.html .editor div.tag div.text span,
 div.field.html .editor div.tag div.text sup {background-color: rgba(255, 0, 0, 0.3); cursor: default; font-size: inherit;}
 div.field.html .editor div.tag div.text sup {line-height: 1em; font-size: 11px;}
-div.field.html .editor div.tag.focus {background-color: #3E8E17; padding: 0 0 0 30px; margin: 0 0 1px; border: 3px solid #3E8E17;}
+div.field.html .editor div.tag.focus {background-color: #6EAA51; padding: 0 0 0 30px; margin: 0 0 1px; border: 3px solid #6EAA51;}
 div.field.html .editor div.tag + div.tag.focus {margin-top: -2px;}
 div.field.html .editor div.tag.focus + div.tag {margin-top: 1px;}
-div.field.html .editor div.tag.focus .drag {background-color: #3E8E17; }
+div.field.html .editor div.tag.focus .drag {background-color: #6EAA51; }
 div.field.html .editor div.tag.focus ul.type li {color: #ffffff;}
 div.field.html .editor div.tag.h1 div.text {font-size: 36px;}
 div.field.html .editor div.tag.h2 div.text {font-size: 30px;}
@@ -418,7 +418,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 	color: #666;
 }
 #header ul.servicenavigation a:hover {
-	color: #3e8e17;
+	color: #6EAA51;
 	text-decoration: underline;
 }
 #navigation {
@@ -450,8 +450,8 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 #navigation ul.navigation li.selected > h4,
 #navigation ul.navigation li.selected > h5,
 #navigation ul.navigation li.selected > a {
-	background-color: #3e8e17;
-	border: 0px solid #3e8e17;
+	background-color: #6EAA51;
+	border: 0px solid #6EAA51;
 	padding: 5px 12px;
 	color: #fff;
 }
@@ -479,7 +479,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 }
 #navigation ul.navigation h5:hover,
 #navigation ul.navigation a:hover {
-	background-color: #3e8e17;
+	background-color: #6EAA51;
 }
 #navigation ul.navigation h5:hover {
 	cursor: pointer;
@@ -547,7 +547,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 }
 #content a {
 	text-decoration: none;
-	color: #3e8e17;
+	color: #6EAA51;
 	font-weight: bold;
 }
 #content a:hover {
@@ -633,7 +633,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 	padding-left: 12px;
 	padding-right: 12px;
 }
-#content div.messages p.message {padding: 10px; margin-bottom: 10px; border: 2px solid #3E8E17; color: #3E8E17;}
+#content div.messages p.message {padding: 10px; margin-bottom: 10px; border: 2px solid #6EAA51; color: #6EAA51;}
 #content div.messages p.error {padding: 10px; margin-bottom: 10px; border: 2px solid #C22414; color: #C22414;}
 #content div.c-wrapper {
 	display: block;
@@ -672,15 +672,16 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 	margin-left: 12px;
 	margin-right: 12px;
 	margin-bottom: 12px;
+	margin-top: 24px;
 }
 #content div.c-box {
 	background: #f2f2f2;
 }
 #content div.c-box.obs {
-	border-top: 2px solid #3e8e17;
+	border-top: 2px solid #6EAA51;
 }
 #content div.c-primary-box {
-	background: #3e8e17;
+	background: #6EAA51;
 }
 #content .c-box > h2,
 #content .c-primary-box > h2 {
@@ -761,8 +762,32 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
     height: 50px;
 }
 #footer {
-	height: 48px;
-	background: #484848;
+	background: #9c9a81;
+	color: #000;
+}
+#footer li{
+	line-height: 24px;
+}
+#footer .row {
+	width:936px;
+	margin: 0 auto;
+	padding: 16px 0;
+}
+#footer .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+#footer .row h3{
+	font-weight: bold;
+}
+#footer .row ul{
+    list-style: disc;
+    margin-inline-start: 16px;
+}
+#footer .column {
+	float: left;
+	width: 33.33%;
 }
 #footer ul.servicenavigation {
 	margin: 0 auto;
@@ -773,13 +798,22 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 #footer ul.servicenavigation li {
 	display: inline-block;
 	padding: 17px 0 10px 15px;
-	color: #ffffff;
+	color: #000;
 }
 #footer ul.servicenavigation li.copyright {
 	float: left;
 	padding-left: 0;
 }
-
+#footer .newsletter ul.actions input.button {
+	background-color: #000;
+}
+#footer .newsletter div.field {
+	padding:0;
+}
+#footer .newsletter div.field input{
+	width:100%;
+	border-radius: 4px;
+}
 
 /*s-login.css*/
 #content .scene.login form {width: 380px; margin: 0 auto; padding-top: 20px;}
@@ -1100,7 +1134,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 #content .front div.news ul.items li.item p {padding-left: 0; padding-right: 0;}
 #content .front div.news ul.items li.item h3 > a {color: #000000;}
 #content .front div.news ul.items li.item:hover {cursor: pointer; }
-#content .front div.news ul.items li.item:hover h3 > a {color: #3e8e17;}
+#content .front div.news ul.items li.item:hover h3 > a {color: #6EAA51;}
 #content .front div.news ul.items li.item:hover > .image { background-size: 107% auto;}
 #content .front div.news ul.items li.item .image {
 	width: 100%;
@@ -1150,13 +1184,16 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 #content .front div.steps ul.items li.item.four{
     background-color: #9ec383;
 }
+#content .front div.steps ul.items li.item:hover {
+    background-color: #6EAA51;
+}
 #content .front div.steps ul.items li.item h3 {margin-top: 0px; font-size: 20px;}
 #content .front div.steps ul.items li.item h3,
 #content .front div.steps ul.items li.item p {padding: 0;}
 #content .front div.steps ul.items li.item p {font-size: 16px;}
 #content .front div.steps ul.items li.item h3 > a {color: #000000;}
 #content .front div.steps ul.items li.item:hover {cursor: pointer; }
-#content .front div.steps ul.items li.item:hover h3 > a {color: #3e8e17;}
+#content .front div.steps ul.items li.item:hover h3 > a {color: #6EAA51;}
 #content .front div.steps ul.items li.item .image {
 	width: 100%;
 	text-align: center;
@@ -1183,7 +1220,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 #content .front div.hero ul.items li.item p {padding-left: 0; padding-right: 0;}
 #content .front div.hero ul.items li.item h3 > a {color: #000000;}
 #content .front div.hero ul.items li.item:hover {cursor: pointer; }
-#content .front div.hero ul.items li.item:hover h3 > a {color: #3e8e17;}
+#content .front div.hero ul.items li.item:hover h3 > a {color: #6EAA51;}
 #content .front div.hero ul.items li.item .image {
 	width: 100%;
 	text-align: center;
@@ -1259,7 +1296,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 #content .scene div.posts ul.items li.item p {padding-left: 0; padding-right: 0;}
 #content .scene div.posts ul.items li.item h3 > a {color: #000000;}
 #content .scene div.posts ul.items li.item:hover {cursor: pointer; }
-#content .scene div.posts ul.items li.item:hover h3 > a {color: #3e8e17;}
+#content .scene div.posts ul.items li.item:hover h3 > a {color: #6EAA51;}
 #content .scene div.posts ul.items li.item:hover > .image {background-size: 107% auto;}
 #content .scene div.posts ul.items li.item .image {
 	width: 100%;
@@ -1486,7 +1523,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 	font-family: 'voresfont', Arial, Helvetica, sans-serif;
 }
 #content div.shop_shift ul.status li:first-child {border: none;}
-#content div.shop_shift ul.status li span {color: #3E8E17;}
+#content div.shop_shift ul.status li span {color: #6EAA51;}
 #content .scene.shop_shift div.orders {padding: 48px 0 24px;}
 #content .scene.shop_shift div.orders ul.list {padding: 0 12px; margin: 0; list-style: none;}
 #content .scene.shop_shift div.orders ul.list > li {padding: 10px 0;
@@ -1615,7 +1652,7 @@ div.field.html .editor .selection_options ul.actions li {padding: 0;}
 #content div.user_profile .c-wrapper > .c-one-third .section:first-child {
 	margin-top: 0px;
 }
-#content .user_profile p.view-orders {float: right; text-decoration: underline #3e8e17;}
+#content .user_profile p.view-orders {float: right; text-decoration: underline #6EAA51;}
 #content .user_profile p.view-orders a.button:hover {color: #357914;}
 #content .user_profile ul.actions.new-order a.button {padding-top: 5px; padding-bottom: 5px;}
 #content .user_profile div.c-wrapper div.c-box.obs h2.obs 
@@ -2110,14 +2147,14 @@ div.overlay .field.password {
 #content .article .image img,
 #content .article .media img {width: 100%;}
 #content .c-box.actions ul.actions li {display: block; text-align: left; padding-left: 0;}	
-#content .c-box.actions ul.actions li a {position: relative; display: inline-block; vertical-align: top; padding: 8px 20px; line-height: 16px; font-size: 16px; height: 18px; background-color: #3e8e17; background-repeat: no-repeat; background-position: top left; color: #ffffff;}
+#content .c-box.actions ul.actions li a {position: relative; display: inline-block; vertical-align: top; padding: 8px 20px; line-height: 16px; font-size: 16px; height: 18px; background-color: #6EAA51; background-repeat: no-repeat; background-position: top left; color: #ffffff;}
 #content .c-box.actions ul.actions li a:after {
 	content: " ";
 	vertical-align: top;
 	display: inline-block;
 	height: 24px;
 	width: 24px;
-	background-color: #3e8e17;
+	background-color: #6EAA51;
 	position: absolute;
 	top: 5px;
 	right: -12px;
@@ -2172,11 +2209,10 @@ div.overlay .field.password {
 	margin: 0 16px;
 	min-width: 200px;
 	color: #ffffff;
-	background: #3e8e17;
+	background: #6EAA51;
 	border-radius: 4px;
 	font-weight: 500;
 	font-size: 24px;
-	box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
 }
 #content .front  .c-box.actions :hover {
 	background: #357914;
@@ -2184,5 +2220,8 @@ div.overlay .field.password {
 
 
 #content div.c-box.newsletter {
-    background: #e2eedd;
+    background: #e2eedd;    
+	max-width: 400px;
+    margin: 36px auto;
+	border-radius: 5px;
 }

@@ -172,20 +172,6 @@ $post_items = $IC->getItems([
 
 		</div>
 
-		<div class="c-box weeklybag">
-		<? if($weeklybag_item): ?>
-			<h3>Ugens pose - <?= $weeklybag_item["name"] ?></h3>
-			<?= $weeklybag_item["html"] ?>
-
-			<p class="readmore"><a href="/ugens-pose/<?= $weeklybag_item["sindex"] ?>">Læs mere om ugens pose</a></p>
-		<? else: ?>
-			<h3>Ugens pose</h3>
-			<p>Ugens pose er endnu ikke oprettet.</p>
-
-			<p class="readmore"><a href="/ugens-pose">Læs mere om ugens pose</a></p>
-		<? endif; ?>
-		</div>
-
 	</div>
 
 
