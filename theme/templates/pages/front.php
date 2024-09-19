@@ -39,9 +39,10 @@ $post_items = $IC->getItems([
 
 		<!-- icons from https://icons.getbootstrap.com/ -->
 		<div class="steps">
+			<h3 itemprop="headline">Nemt at komme i gang</h3>
 			<ul class="items articles">
 				<li class="item article one">
-					<a href="/login">
+					<a href="/bliv-medlem">
 						<div class="image"> 
 							<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
 								<path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
@@ -91,28 +92,21 @@ $post_items = $IC->getItems([
 						</div>
 						<h3 itemprop="headline">4.</h3>
 						<div class="description" itemprop="description">
-							<p>Nyd dine grøntsager</p>
+							<p>Nyd ugens pose</p>
 						</div>
 					</a>
 				</li>
 			</ul>
 		</div>
-		<div class="hero">
-			<ul class="items">
-				<li class="item">
-					<div class="image">
-						<img src="https://kbhff.dk/images/273/single_media/380x.png"/>
-					</div>
-				</li>
-				<li class="item">
-					<h3 itemprop="headline">Hvad er der i posen?</h3>
-					<div class="description" itemprop="description">
-						Ugens pose rummer typisk 6-8 forskellige slags lokalt produceret og sæsonbestemt økologisk frugt og grønt.<br /> 
-						Da posen sammensættes af sæsonens grøntsager varierer vægten. <br />
-						Om vinteren, hvor der er mange rodfrugter, vejer den typisk 6-8 kilo, mens den om sommeren, hvor salater, asparges, krydderurter osv. fylder mere, vejer den typisk omkring 4 kilo. 
-					</div>
-				</li>
-			</ul>
+		<div class="whatisit">
+			<h3 itemprop="headline">Hvad er det egentlig?</h3>
+			<video width="100%" controls>
+				<source src="../assets/kbhff-skin/videos/KBHFF_explainer.mp4">
+				Your browser does not support HTML video.
+			</video>
+			<div class="cta actions">
+				<a href="/om">Læs mere</a>
+			</div>
 		</div>
 		
 		<? if($post_items): ?>
@@ -152,6 +146,9 @@ $post_items = $IC->getItems([
 					</li>
 				<? endforeach; ?>
 				</ul>
+				<div class="cta actions">
+					<a href="/nyheder">Se alle nyheder</a>
+				</div>
 			</div>
 		<? endif ?>
 
@@ -170,6 +167,16 @@ $post_items = $IC->getItems([
 				</ul>
 			</form>
 
+		</div>
+
+		<div class="hero">
+			<ul class="items">
+				<li class="item">
+					<div class="image">
+						<img src="https://kbhff.dk/images/273/single_media/380x.png"/>
+					</div>
+				</li>
+			</ul>
 		</div>
 
 	</div>

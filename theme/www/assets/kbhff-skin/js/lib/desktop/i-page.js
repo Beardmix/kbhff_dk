@@ -29,6 +29,24 @@ Util.Modules["page"] = new function() {
 
 //			u.bug("page.cN.offsetHeight:" + page.cN.offsetHeight)
 
+			if(this.bn_nav) {
+				// Update navigation if open
+				if (this.bn_nav.is_open) {
+					// Update heights
+					u.ass(page.hN, {
+						"height":window.innerHeight + "px"
+					});
+
+					u.ass(page.nN, {
+						"height":(window.innerHeight - page.hN.service.offsetHeight) + "px"
+					});
+
+					// Update drag coordinates
+					u.e.setDragPosition(page.nN.nav, 0, 0);
+					u.e.setDragBoundaries(page.nN.nav, page.nN);
+				}
+			}
+
 			u.as(this.cN, "min-height", "auto");
 			if(this.available_height >= this.cN.offsetHeight) {
 				u.as(this.cN, "min-height", this.available_height+"px", false);
@@ -94,60 +112,200 @@ Util.Modules["page"] = new function() {
 		// initialize navigation
 		page.initNavigation = function() {
 
-			page.nN_nodes = u.qsa("li.indent0", page.nN);
-			
-			var z_index_counter = 100;
 
-			for (var i = 0; i < page.nN_nodes.length; i++) {
-				var nav_node = page.nN_nodes[i];
-				nav_node.subnav = u.qs("ul", nav_node);
-								
-				if (nav_node.subnav) {
-					
-					u.e.hover(nav_node, {
-						"delay":"200"
-					});
+			this.nN.list = u.qs("ul.navigation", this.nN);
 
-					nav_node.is_over = false;
 
-					nav_node.over = function(event) {
-						nav_node.is_over = true;
+			// create burger menu
+			this.bn_nav = u.qs(".servicenavigation li.navigation", this.hN);
+			if(this.bn_nav) {
+				u.ae(this.bn_nav, "div");
+				u.ae(this.bn_nav, "div");
+				u.ae(this.bn_nav, "div");
 
-						z_index_counter++;
+				// enable nav link
+				u.ce(this.bn_nav);
+				this.bn_nav.clicked = function(event) {
 
-						u.ass(this.subnav, {
-							"display":"block",
-							"z-index": z_index_counter
+					// close navigation
+					if(this.is_open) {
+						// Update open state
+						this.is_open = false;
+						u.rc(this, "open");
+
+						// var i, node;
+						// // set hide animation for nav nodes
+						// for(i = 0; node = page.nN.nodes[i]; i++) {
+						//
+						// 	u.a.transition(node, "all 0.2s ease-in "+(i*100)+"ms");
+						// 	u.ass(node, {
+						// 		"opacity": 0,
+						// 		"transform":"translate(0, -30px)"
+						// 	});
+						// }
+
+						// hide navigation when hidden
+						// page.hN.transitioned = function() {
+							u.ass(page.nN, {
+								"display": "none"
+							});
+						// }
+
+						// // collapse header
+						// u.a.transition(page.nN, "all 0.3s ease-in");
+						// u.ass(page.nN, {
+						// 	"height": "0px"
+						// });
+
+						// Disable nav scroll 
+						u.ass(page.nN, {
+							"overflow-y":"hidden"
 						});
-						
-						u.a.transition(this.subnav, "all 0.3s ease-out")
 
-						u.ass(this.subnav, {
-							"opacity":"1"
+						// Enable body scroll
+						u.ass(page.parentNode, {
+							"overflow-y":"scroll"
+						});
+
+					}
+					// open navigation
+					else {
+						// Update open state
+						this.is_open = true;
+						u.ac(this, "open");
+
+						// Clear hN transitioned, in order to prevent bugs
+						// delete page.hN.transitioned;
+
+						// var i, node;
+						// // set initial animation state for nav nodes
+						// for(i = 0; node = page.nN.nodes[i]; i++) {
+						// 	u.ass(node, {
+						// 		"opacity": 0,
+						// 		"transform":"translate(0, 30px)"
+						// 	});
+						// }
+
+						// set animation for header
+						// u.a.transition(page.nN, "all 0.2s ease-in");
+
+						// Set height of hN
+						// u.ass(page.hN, {
+						// 	"height": window.innerHeight+"px",
+						// });
+
+						// Set height on navigation
+						u.ass(page.nN, {
+							"height":(window.innerHeight - page.hN.service.offsetHeight) + "px"
+						});
+
+						u.ass(page.nN, {
+							"display": "block"
+						});
+
+						// // set animation for nav nodes
+						// for(i = 0; node = page.nN.nodes[i]; i++) {
+						//
+						// 	u.a.transition(node, "all 0.3s ease-in "+(100 + (i*100))+"ms");
+						// 	u.ass(node, {
+						// 		"opacity": 1,
+						// 		"transform":"translate(0, 0)"
+						// 	});
+						// }
+						
+						// Enable nav scroll 
+						u.ass(page.nN, {
+							"overflow-y":"scroll"
+						});
+
+						// Disable body scroll
+						u.ass(page.parentNode, {
+							"overflow-y":"hidden"
 						});
 					}
-					
-					nav_node.out = function(event) {
-						nav_node.is_over = false;
 
-						this.subnav.transitioned = function() {
-							if(!nav_node.is_over) {
-								u.ass(this, {
-									"display":"none"
-								});
-							}
-						};
+					// Update drag coordinates
+					u.e.setDragPosition(page.nN.nav, 0, 0);
+					u.e.setDragBoundaries(page.nN.nav, page.nN);
 
-						u.a.transition(this.subnav, "all 0.15s ease-out");
-						
-						u.ass(this.subnav, {
-							"opacity":"0"
-						});
+				}
+				// enable dragging on navigation
+				u.e.drag(this.nN.nav, this.nN, {"strict":false, "elastica":200, "vertical_lock":true, "overflow":"scroll"});
+			}
 
-					}
+			var i, node;
+
+			// append footer servicenavigation to header servicenavigation
+			if(page.fN.service) {
+				nodes = u.qsa("li:not(.copyright)", page.fN.service);
+				for(i = 0; node = nodes[i]; i++) {
+					u.ae(page.nN.list, node, {"class":"footer"});
+				}
+				page.fN.removeChild(page.fN.service);
+			}
+
+			// append header servicenavigation to header servicenavigation
+			if(page.hN.service) {
+				nodes = u.qsa("li:not(.navigation)", page.hN.service);
+				for(i = 0; node = nodes[i]; i++) {
+					u.ae(page.nN.list, node, {"class":"header"});
 				}
 			}
+
+			var i, node, nodes;
+			// enable animation on submenus and logo
+			nodes = u.qsa("#navigation li,a.logo", page.hN);
+			for(i = 0; node = nodes[i]; i++) {
+
+				// build first living proof model of CEL clickableElementLink
+				u.ce(node, {"type":"link"});
+
+				// // add over and out animation
+				// u.e.hover(node);
+				// node.over = function() {
+				//
+				// 	this.transitioned = function() {
+				//
+				// 		this.transitioned = function() {
+				// 			u.a.transition(this, "none");
+				// 		}
+				//
+				// 		u.a.transition(this, "all 0.1s ease-in-out");
+				// 		u.a.scale(this, 1.15);
+				// 	}
+				//
+				// 	u.a.transition(this, "all 0.1s ease-in-out");
+				// 	u.a.scale(this, 1.22);
+				// }
+				// node.out = function() {
+				//
+				// 	this.transitioned = function() {
+				//
+				// 		this.transitioned = function() {
+				// 			u.a.transition(this, "none");
+				// 		}
+				//
+				// 		u.a.transition(this, "all 0.1s ease-in-out");
+				// 		u.a.scale(this, 1);
+				// 	}
+				//
+				// 	u.a.transition(this, "all 0.1s ease-in-out");
+				// 	u.a.scale(this, 0.9);
+				// }
+
+			}
+
+			// get clean set of navigation nodes (for animation on open and close)
+			page.nN.nodes = u.qsa("li", page.nN.list);
+
+			if(page.hN.service) {
+				u.ass(page.hN.service, {
+					"opacity":1
+				});
+			}
+
 		}
+
 
 		// show accept cookies dialogue
 		page.acceptCookies = function() {
