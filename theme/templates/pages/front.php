@@ -13,7 +13,7 @@ $post_items = $IC->getItems([
 	"itemtype" => "post",
 	"tags" => "on:frontpage",
 	"status" => 1,
-	"limit" => 12,
+	"limit" => 100,
 	"extend" => [
 		"tags" => true,
 		"readstate" => true,
@@ -75,6 +75,8 @@ $post_items = $IC->getItems([
 
 						<? if($media): ?>
 						<div class="image item_id:<?= $media["item_id"] ?> format:<?= $media["format"] ?> variant:<?= $media["variant"] ?>"></div>
+						<? else: ?>
+							<br/>
 						<? endif; ?>
 
 
